@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> {{name_of}}</title>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf-8"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	</head>
+	<body>
+		<h1>{{name_of}}</h1>
+		<form id="channel_message">
+                <div class="form-row align-items-center">
+                        <div class="col-auto">
+				<label class="sr-only" for="username">Username</label>
+                                <div class="input-group mb-2">
+                                        <div class="input-group-rendered">
+                                                <div class="input-group-text">@</div>
+                                        </div>
+                                        <input type="text" class="form-control form-control-lg" id="message" placeholder="Please Enter a Name">
+                                </div>
+                        </div>
+                        <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-2" id="submit">&gt;</button>
+                        </div>
+                </div>
+        </form>
+		<ul id="list_messages">
+		</ul>
+		<script src="{{url_for('static',filename='channel_js.js')}}"></script>
+	</body>
+</html>
+
+
